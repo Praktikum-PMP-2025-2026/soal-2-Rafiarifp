@@ -14,12 +14,16 @@ void counttransformation(int n, int transformation){
     int next_n;
     int odd = n%2; // jika ganjil, n%2 = 1. jika genap, n%2 = 0
 
-    if (n == 2){ // jika n = 2, berikutnya adalah 1, dan rekursi selesai
+    if (n == 1){ // jika n = 1, langsung print transformation = 0
+        printf("\nLANGKAH %d\n", transformation);
+    }
+
+    else if (n == 2){ // jika n = 2, berikutnya adalah 1, dan rekursi selesai
         printf("\nLANGKAH %d\n", transformation+1);
         return;
     }
 
-    if ((odd == 1) && (n > 1)){ // ganjil DAN n>1
+    else if ((odd == 1) && (n > 1)){ // ganjil DAN n>1
         next_n = (n*3)+1;
         counttransformation(next_n, transformation+1);
     }
