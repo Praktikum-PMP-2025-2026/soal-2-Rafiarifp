@@ -19,7 +19,7 @@ void counttransformation(int n, int transformation){
     }
 
     else if (n == 2){ // jika n = 2, berikutnya adalah 1, dan rekursi selesai
-        printf("\nLANGKAH %d\n", transformation+1);
+        printf("LANGKAH %d\n", transformation+1);
         return;
     }
 
